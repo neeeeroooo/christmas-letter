@@ -75,6 +75,7 @@ export const config = {
     '/login/:path*',
     '/editor/:path*',
     '/card/:path*',
+    '/card-for-you/:path*',
     // '/login',
     // '/landing-page',
     // '/public/:path*',

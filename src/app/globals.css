@@ -1,8 +1,12 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
+}
+
+.font-christmas {
+  font-family: 'Pacifico', cursive;
 }
 
 @theme inline {
@@ -23,4 +27,130 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+  z-index: 1;
+  background-color: antiquewhite;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+}
+#xmas {
+  width: 600px;
+}
+.box {
+  cursor: pointer;
+}
+footer {
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 30px;
+  right: 30px;
+  font-size: 14px;
+  opacity: 0.7;
+  z-index: 999;
+}
+footer a {
+  text-decoration: none;
+  color: #fff;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-10%) translateX(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh) translateX(20px);
+    opacity: 0;
+  }
+}
+
+.animate-fall {
+  animation-name: fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.card-border {
+  border: 6px solid;
+  border-image-slice: 1;
+  border-width: 6px;
+  border-radius: 2rem; /* ให้ตรงกับการ์ด */
+  border-image-source: linear-gradient(
+    270deg,
+    #ffd700,
+    #ff6b6b,
+    #6bcb77,
+    #4d96ff,
+    #ffb6c1,
+    #ffd700
+  );
+  animation: borderGradient 4s linear infinite;
+}
+
+@keyframes borderGradient {
+  0% {
+    border-image-source: linear-gradient(
+      0deg,
+      #ffd700,
+      #ff6b6b,
+      #6bcb77,
+      #4d96ff,
+      #ffb6c1,
+      #ffd700
+    );
+  }
+  25% {
+    border-image-source: linear-gradient(
+      90deg,
+      #ffd700,
+      #ff6b6b,
+      #6bcb77,
+      #4d96ff,
+      #ffb6c1,
+      #ffd700
+    );
+  }
+  50% {
+    border-image-source: linear-gradient(
+      180deg,
+      #ffd700,
+      #ff6b6b,
+      #6bcb77,
+      #4d96ff,
+      #ffb6c1,
+      #ffd700
+    );
+  }
+  75% {
+    border-image-source: linear-gradient(
+      270deg,
+      #ffd700,
+      #ff6b6b,
+      #6bcb77,
+      #4d96ff,
+      #ffb6c1,
+      #ffd700
+    );
+  }
+  100% {
+    border-image-source: linear-gradient(
+      360deg,
+      #ffd700,
+      #ff6b6b,
+      #6bcb77,
+      #4d96ff,
+      #ffb6c1,
+      #ffd700
+    );
+  }
 }

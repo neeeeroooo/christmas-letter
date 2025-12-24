@@ -32,6 +32,9 @@ importers:
       graphql:
         specifier: 16.9.0
         version: 16.9.0
+      gsap:
+        specifier: ^3.14.2
+        version: 3.14.2
       jwt-decode:
         specifier: 4.0.0
         version: 4.0.0
@@ -44,6 +47,9 @@ importers:
       react:
         specifier: 19.1.0
         version: 19.1.0
+      react-confetti:
+        specifier: ^6.4.0
+        version: 6.4.0(react@19.1.0)
       react-dom:
         specifier: 19.1.0
         version: 19.1.0(react@19.1.0)
@@ -1669,6 +1675,9 @@ packages:
     resolution: {integrity: sha512-GGTKBX4SD7Wdb8mqeDLni2oaRGYQWjWHGKPQ24ZMnUtKfcsVoiv4uX8+LJr1K6U5VW2Lu1BwJnj7uiori0YtRw==}
     engines: {node: ^12.22.0 || ^14.16.0 || ^16.0.0 || >=17.0.0}
 
+  gsap@3.14.2:
+    resolution: {integrity: sha512-P8/mMxVLU7o4+55+1TCnQrPmgjPKnwkzkXOK1asnR9Jg2lna4tEY5qBJjMmAaOBDDZWtlRjBXjLa0w53G/uBLA==}
+
   has-bigints@1.1.0:
     resolution: {integrity: sha512-R3pbpkcIqv2Pm3dUwgjclDRVmWpTJW2DcMzcIhEXEx1oh/CEMObMm3KLmRJOdvhM7o4uQBnwr8pzRK2sJWIqfg==}
     engines: {node: '>= 0.4'}
@@ -2248,6 +2257,12 @@ packages:
     resolution: {integrity: sha512-y3bGgqKj3QBdxLbLkomlohkvsA8gdAiUQlSBJnBhfn+BPxg4bc62d8TcBW15wavDfgexCgccckhcZvywyQYPOw==}
     hasBin: true
 
+  react-confetti@6.4.0:
+    resolution: {integrity: sha512-5MdGUcqxrTU26I2EU7ltkWPwxvucQTuqMm8dUz72z2YMqTD6s9vMcDUysk7n9jnC+lXuCPeJJ7Knf98VEYE9Rg==}
+    engines: {node: '>=16'}
+    peerDependencies:
+      react: ^16.3.0 || ^17.0.1 || ^18.0.0 || ^19.0.0
+
   react-dom@19.1.0:
     resolution: {integrity: sha512-Xs1hdnE+DyKgeHJeJznQmYMIBG3TKIHJJT95Q58nHLSrElKlGQqDTR2HQ9fx5CN/Gk6Vh/kupBTDLU11/nDk/g==}
     peerDependencies:
@@ -2556,6 +2571,9 @@ packages:
 
   tunnel-agent@0.6.0:
     resolution: {integrity: sha512-McnNiV1l8RYeY8tBgEpuodCC1mLUdbSN+CYBL7kJsJNInOP8UjDDEwdk6Mw60vdLLrr5NHKZhMAOSrR2NZuQ+w==}
+
+  tween-functions@1.2.0:
+    resolution: {integrity: sha512-PZBtLYcCLtEcjL14Fzb1gSxPBeL7nWvGhO5ZFPGqziCcr8uvHp0NDmdjBchp6KHL+tExcg0m3NISmKxhU394dA==}
 
   type-check@0.4.0:
     resolution: {integrity: sha512-XleUoc9uwGXqjWwXaUTZAmzMcFZ5858QA2vvx1Ur5xIcixXIP+8LnFDgRplU30us6teqdlskFfu+ae4K79Ooew==}
@@ -4565,6 +4583,8 @@ snapshots:
 
   graphql@16.9.0: {}
 
+  gsap@3.14.2: {}
+
   has-bigints@1.1.0: {}
 
   has-flag@4.0.0: {}
@@ -5183,6 +5203,11 @@ snapshots:
       strip-json-comments: 2.0.1
     optional: true
 
+  react-confetti@6.4.0(react@19.1.0):
+    dependencies:
+      react: 19.1.0
+      tween-functions: 1.2.0
+
   react-dom@19.1.0(react@19.1.0):
     dependencies:
       react: 19.1.0
@@ -5588,6 +5613,8 @@ snapshots:
     dependencies:
       safe-buffer: 5.2.1
     optional: true
+
+  tween-functions@1.2.0: {}
 
   type-check@0.4.0:
     dependencies:
