@@ -55,6 +55,7 @@ const eslintConfig = [
       'react/no-unescaped-entities': 'off',
       'react/prop-types': 'off',
       '@next/next/no-img-element': 'off',
+      'react/no-unknown-property': 'off',
     },
   },
 ];
