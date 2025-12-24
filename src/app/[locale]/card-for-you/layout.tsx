@@ -51,11 +51,7 @@ export default async function RootLayout({
   return (
     <NextIntlClientProvider locale={locale} messages={messages}>
       {/* 🔹 ปุ่มสลับภาษาที่มุมขวาบน */}
-      <div className="fixed top-4 right-4 z-50">
-        <LocaleSwitcher />
-      </div>
 
-      {/* 🔹 ส่วนเนื้อหา */}
       {children}
     </NextIntlClientProvider>
   );

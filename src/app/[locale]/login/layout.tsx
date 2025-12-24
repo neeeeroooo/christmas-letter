@@ -3,9 +3,6 @@ import '../../globals.css';
 
 import React from 'react';
 
-import type { Metadata, ResolvingMetadata } from 'next';
-import { ApolloWrapper } from '@/lib/ApolloWrapper';
-
 // import { AntdRegistry } from '@ant-design/nextjs-registry';
 import { unstable_noStore as noStore } from 'next/cache';
 import { NextIntlClientProvider } from 'next-intl';

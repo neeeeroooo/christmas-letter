@@ -15,6 +15,9 @@ import 'dayjs/locale/en'; // โหลด locale ภาษาอังกฤษ
 import dayjs from 'dayjs';
 import buddhistEra from 'dayjs/plugin/buddhistEra';
 import LocaleSwitcher from '@/components/localeSwitcher';
+import AuthGuard from '@/components/auth/AuthGuard';
+import { LogoutButton } from '@/components/auth/LogoutButton';
+import { auth } from '@/lib/auth';
 
 const prompt = Prompt({
   subsets: ['latin'],
@@ -34,7 +37,7 @@ export default async function RootLayout({
   params: Promise<{ locale: string }>;
 }>) {
   noStore();
-
+  const user = auth.currentUser;
   const { locale } = await params;
 
   // Ensure that the incoming `locale` is valid
@@ -51,12 +54,13 @@ export default async function RootLayout({
   return (
     <NextIntlClientProvider locale={locale} messages={messages}>
       {/* 🔹 ปุ่มสลับภาษาที่มุมขวาบน */}
-      <div className="fixed top-4 right-4 z-50">
-        <LocaleSwitcher />
-      </div>
-
-      {/* 🔹 ส่วนเนื้อหา */}
-      {children}
+      <AuthGuard>
+        <header className="h-14 px-6 flex items-center justify-between border-b bg-white">
+          <h1 className="font-bold text-lg">🎄 Christmas Card Editor</h1>
+          <LogoutButton />
+        </header>
+        {children}
+      </AuthGuard>
     </NextIntlClientProvider>
   );
 }
