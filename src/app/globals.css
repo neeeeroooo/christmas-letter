@@ -154,3 +154,55 @@ footer a:hover {
     );
   }
 }
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  background: #ffe4ec;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 320px;
+  padding: 40px 20px;
+  background: white;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.card h1 {
+  color: #fe3a65;
+  margin-bottom: 30px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+button {
+  padding: 10px 24px;
+  border-radius: 8px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+.yes {
+  background: #4caf50;
+  color: white;
+}
+
+.no {
+  background: #f44336;
+  color: white;
+}

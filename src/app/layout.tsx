@@ -1,42 +1,30 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
+import { Playfair_Display, Mali } from 'next/font/google';
 import './globals.css';
-import { Prompt, Sarabun } from 'next/font/google';
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
+const playfair = Playfair_Display({
   subsets: ['latin'],
+  weight: ['400', '600', '700'],
 });
 
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
-});
-const prompt = Prompt({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
-});
-
-const sarabun = Sarabun({
+const mali = Mali({
   subsets: ['thai', 'latin'],
-  weight: ['300', '400', '500', '600', '700'],
-  variable: '--font-sarabun',
+  weight: ['300', '400', '500', '600'],
 });
+
 export const metadata: Metadata = {
-  title: 'Gumon',
-  description: 'Gumon Dynamic Admin ',
+  title: 'Valentine 💖',
+  description: 'Romantic Valentine Page',
 };
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en">
-      <body className={`${prompt.className} ${sarabun.variable}`}>
-        {children}
-      </body>
+    <html lang="th">
+      <body className={mali.className}>{children}</body>
     </html>
   );
 }
